@@ -1,33 +1,24 @@
-﻿<Window x:Class="GestionEtudiant.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionEtudiant"
+        xmlns:MyUserControls="clr-namespace:GestionEtudiant.Views.MyUserControls" x:Class="GestionEtudiant.MainWindow"
         mc:Ignorable="d"
         Title= "{Binding TitleOfMainWindow}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="263*"/>
-            <ColumnDefinition Width="498*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="97*"/>
             <RowDefinition Height="409*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnGestionEtudiant" Content="Gestion Etudiant" Margin="57,0,0,27.8" HorizontalAlignment="Left" Width="104" Height="40" VerticalAlignment="Bottom"/>
-        <Button x:Name="btnAbsence" Content="Absence" Margin="8.8,0,0,32.8" HorizontalAlignment="Left" Width="104" Height="35" VerticalAlignment="Bottom" Grid.Column="1"/>
-        <Button x:Name="btnLogIn" Content="Se connecter" Margin="0,0,41.6,35.8" HorizontalAlignment="Right" Width="108" FontSize="14" Height="32" VerticalAlignment="Bottom" Grid.Column="1"/>
-        <StackPanel Margin="67,75.2,75.2,158.6" Orientation="Vertical" Grid.Row="1">
-            <Button x:Name="btnAjouter" Content="Ajouter" VerticalAlignment="Top" Height="19" HorizontalAlignment="Left" Width="106" Margin="0,20" Click="btnAjouter_Click"/>
-            <Button x:Name="btnEditer" Content="Editer" VerticalAlignment="Top" Height="19" HorizontalAlignment="Left" Width="104" Margin="2,20,0,20" Click="btnEditer_Click"/>
-            <Button x:Name="btnSupprimer" Content="Supprimer" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left" Width="106" Margin="0,20,0,0" Click="btnSupprimer_Click"/>
-        </StackPanel>
-        <DataGrid x:Name="dgdEtudiant" 
-                  ItemsSource="{Binding ListOfStudent}"
-                  Grid.Column="1" 
-                  Grid.Row="1" 
-                  Margin="10.8,0.2,-0.4,-0.4"/>
+        <Button x:Name="btnGestionEtudiant" Content="Gestion Etudiant" Margin="57,0,0,27.8" HorizontalAlignment="Left" Width="104" Height="40" VerticalAlignment="Bottom" Click="btnGestionEtudiant_Click"/>
+        <Button x:Name="btnAbsence" Content="Absence" Margin="272,0,0,32.8" HorizontalAlignment="Left" Width="104" Height="35" VerticalAlignment="Bottom" Click="btnAbsence_Click"/>
+        <Button x:Name="btnLogIn" Content="Se connecter" Margin="0,0,41.6,35.8" HorizontalAlignment="Right" Width="108" FontSize="14" Height="32" VerticalAlignment="Bottom"/>
+        <Grid x:Name="grContent" Grid.Row="1" Background="#FFF7B6B6"/>
     </Grid>
 
 </Window>
