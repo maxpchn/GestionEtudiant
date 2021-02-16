@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Business\UcAbsenceBusiness.cs" />
     <Compile Include="Business\UcEtudiantBusiness.cs" />
+    <Compile Include="Models\Absence.cs" />
     <Compile Include="Views\MyUserControls\UCAbsence.xaml.cs">
       <DependentUpon>UCAbsence.xaml</DependentUpon>
     </Compile>

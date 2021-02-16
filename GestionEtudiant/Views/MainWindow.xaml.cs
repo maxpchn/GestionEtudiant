@@ -43,9 +43,7 @@ namespace GestionEtudiant
         {
             Views.MyUserControls.UCEtudiant uCEtudiant = new Views.MyUserControls.UCEtudiant();
 
-            Business.UcEtudiantBusiness etudiantBusiness = new Business.UcEtudiantBusiness();
-
-            uCEtudiant.DataContext = etudiantBusiness;
+            uCEtudiant.DataContext = new Business.UcEtudiantBusiness();
 
             grContent.Children.Clear();
             grContent.Children.Add(uCEtudiant);
@@ -54,6 +52,9 @@ namespace GestionEtudiant
         private void btnAbsence_Click(object sender, RoutedEventArgs e)
         {
             Views.MyUserControls.UCAbsence uCAbsence = new Views.MyUserControls.UCAbsence();
+
+            uCAbsence.DataContext = new Business.UcAbsenceBusiness();
+
             grContent.Children.Clear();
             grContent.Children.Add(uCAbsence);
         }

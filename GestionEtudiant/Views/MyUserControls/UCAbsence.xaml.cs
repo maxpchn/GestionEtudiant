@@ -24,5 +24,6 @@ namespace GestionEtudiant.Views.MyUserControls
         {
             InitializeComponent();
         }
+
     }
 }
