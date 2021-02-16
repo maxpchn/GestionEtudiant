@@ -5,26 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionEtudiant"
         mc:Ignorable="d"
-        Title="Gestionnaire d'étudiants">
+        Title= "{Binding TitleOfMainWindow}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="262*"/>
-            <ColumnDefinition Width="499*"/>
+            <ColumnDefinition Width="263*"/>
+            <ColumnDefinition Width="498*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="97*"/>
             <RowDefinition Height="409*"/>
         </Grid.RowDefinitions>
         <Button x:Name="btnGestionEtudiant" Content="Gestion Etudiant" Margin="57,0,0,27.8" HorizontalAlignment="Left" Width="104" Height="40" VerticalAlignment="Bottom"/>
-        <Button x:Name="btnAbsence" Content="Absence" Margin="0.6,0,0,32.8" HorizontalAlignment="Left" Width="104" Height="35" VerticalAlignment="Bottom" Grid.Column="1"/>
-        <Button x:Name="btnLogIn" Content="LognIn
-                " Margin="0,0,41.6,35.8" HorizontalAlignment="Right" Width="65" FontSize="14" Height="32" VerticalAlignment="Bottom" Grid.Column="1"/>
-        <StackPanel Margin="67,75.2,83.4,158.6" Orientation="Vertical" Grid.Row="1">
-            <Button x:Name="btnAjouter" Content="Ajouter" VerticalAlignment="Top" Click="Button_Click" Height="19" HorizontalAlignment="Left" Width="106" Margin="0,20"/>
-            <Button x:Name="btnEditer" Content="Editer" VerticalAlignment="Top" Height="19" HorizontalAlignment="Left" Width="104" Margin="2,20,0,20"/>
-            <Button x:Name="btnSupprimer" Content="Supprimer" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left" Width="106" Margin="0,20,0,0"/>
+        <Button x:Name="btnAbsence" Content="Absence" Margin="8.8,0,0,32.8" HorizontalAlignment="Left" Width="104" Height="35" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <Button x:Name="btnLogIn" Content="Se connecter" Margin="0,0,41.6,35.8" HorizontalAlignment="Right" Width="108" FontSize="14" Height="32" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <StackPanel Margin="67,75.2,75.2,158.6" Orientation="Vertical" Grid.Row="1">
+            <Button x:Name="btnAjouter" Content="Ajouter" VerticalAlignment="Top" Height="19" HorizontalAlignment="Left" Width="106" Margin="0,20" Click="btnAjouter_Click"/>
+            <Button x:Name="btnEditer" Content="Editer" VerticalAlignment="Top" Height="19" HorizontalAlignment="Left" Width="104" Margin="2,20,0,20" Click="btnEditer_Click"/>
+            <Button x:Name="btnSupprimer" Content="Supprimer" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left" Width="106" Margin="0,20,0,0" Click="btnSupprimer_Click"/>
         </StackPanel>
-        <Grid x:Name="gdEtudiant" Grid.Column="1" Grid.Row="1"/>
+        <DataGrid x:Name="dgdEtudiant" 
+                  ItemsSource="{Binding ListOfStudent}"
+                  Grid.Column="1" 
+                  Grid.Row="1" 
+                  Margin="10.8,0.2,-0.4,-0.4"/>
     </Grid>
 
 </Window>
